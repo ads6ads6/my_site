@@ -1,28 +1,29 @@
+<!DOCTYPE HTML>
 <html>
 
-<head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-</head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
 
-<body>
-<h1>{{db.__class__.name}}</h1>
+    <body>
+        <h1>{{db.__class__.name}}</h1>
 
-<div id='apDiv5'>
-	<h2 id='textheader'>Eric' data analysis site</h2>
-</div>
+        <div id='apDiv5'>
+            <h2 id='textheader'>Eric' data analysis site</h2>
+        </div>
 
-<div class='statis'>
-<div>
-{% for i in item%}
-{% if i.code.startswith("6") %}
-	<p><a href={{"http://xueqiu.com/S/SH" + i.code}}>"{{i.code}}"</a> : {{i.fluctuation_lastyear}}   {{i.fluctuation_lastday}}</p>
-{% else %}
-	<p><a href={{"http://xueqiu.com/S/SZ" + i.code}}>"{{i.code}}"</a> : {{i.fluctuation_lastyear}}   {{i.fluctuation_lastday}}</p>
-{% endif %}
-{% endfor %}
-</div>
-</div>
+        <div class='statis'>
+        <div>
+            {% for i in item%}
+            {% if i.code.startswith("6") %}
+                <p><a href={{"http://xueqiu.com/S/SH" + i.code}}>"{{i.code}}"</a> : {{i.fluctuation_lastyear}}   {{i.fluctuation_lastday}}</p>
+            {% else %}
+                <p><a href={{"http://xueqiu.com/S/SZ" + i.code}}>"{{i.code}}"</a> : {{i.fluctuation_lastyear}}   {{i.fluctuation_lastday}}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+        </div>
 
-</body>
+    </body>
 </html>
 
