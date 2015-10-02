@@ -1,0 +1,24 @@
+#apDiv5 {
+    position: static;
+    text-align:center;
+    margin:0px auto;
+    width: 898px;
+    height: 60px;
+    z-index: -10;
+    background-color: rgb(0, 85, 170);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #182448;
+}
+
+#textheader{
+    font-family:  sans-serif;
+    color: white;
+}
+
+
+.statis{
+    background-color: yellow;
+    margin-top : 100px;
+    margin-left: 50px;
+}
